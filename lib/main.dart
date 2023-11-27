@@ -1,4 +1,5 @@
-import 'package:emarket/shared/themes.dart';
+import 'package:emarket/pages/login_page.dart';
+import 'package:emarket/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,30 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'Hallo World',
-          style: primaryTextStyle.copyWith(
-            fontSize: 20,
-          ),
-        ),
-      ),
+      routes: {
+        '/': (context) => const SplashPage(),
+        '/login': (context) => const LoginPage(),
+      },
     );
   }
 }
