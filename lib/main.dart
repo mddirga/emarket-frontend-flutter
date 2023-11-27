@@ -1,4 +1,6 @@
+import 'package:emarket/pages/home/home_page.dart';
 import 'package:emarket/pages/login_page.dart';
+import 'package:emarket/pages/register_page.dart';
 import 'package:emarket/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const SplashPage(),
+        '/home': (context) => const HomePage(),
         '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
       },
     );
   }
